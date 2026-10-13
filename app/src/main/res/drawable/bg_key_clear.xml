@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- CLEAR key: soft gold surface so it stands apart from the digit keys. -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/ripple_gold">
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/white" />
+            <corners android:radius="@dimen/key_corner_radius" />
+        </shape>
+    </item>
+    <item>
+        <selector>
+            <item android:state_enabled="false">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/key_disabled" />
+                    <corners android:radius="@dimen/key_corner_radius" />
+                </shape>
+            </item>
+            <item android:state_focused="true">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/gold_100" />
+                    <stroke android:width="@dimen/focus_stroke" android:color="@color/navy_600" />
+                    <corners android:radius="@dimen/key_corner_radius" />
+                </shape>
+            </item>
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/gold_100" />
+                    <stroke android:width="@dimen/hairline" android:color="@color/gold_200" />
+                    <corners android:radius="@dimen/key_corner_radius" />
+                </shape>
+            </item>
+        </selector>
+    </item>
+</ripple>

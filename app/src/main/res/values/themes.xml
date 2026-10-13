@@ -1,0 +1,174 @@
+<resources>
+
+    <!-- No action bar: the screen has its own header with the VangtiChai logo. -->
+    <style name="Theme.VangtiChai" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/navy_800</item>
+        <item name="colorPrimaryDark">@color/navy_900</item>
+        <item name="colorAccent">@color/gold_500</item>
+        <item name="android:windowBackground">@color/screen_background</item>
+    </style>
+
+    <!-- ===== Header ===== -->
+    <style name="HeaderTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/title_text_size</item>
+        <item name="android:textColor">@color/navy_900</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="HeaderTagline">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/tagline_text_size</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <!-- ===== Amount card ===== -->
+    <!-- "Taka:" label -->
+    <style name="AmountLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/amount_label_text_size</item>
+        <item name="android:textColor">@color/gold_500</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <!-- The entered amount. Fixed width/height so a new digit only redraws this view
+         instead of re-measuring the whole screen. amount_text_size is chosen so the
+         9-digit maximum fits on one line in every configuration (no autosize needed). -->
+    <style name="AmountText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/amount_height</item>
+        <item name="android:textSize">@dimen/amount_text_size</item>
+        <item name="android:textColor">@color/surface</item>
+        <item name="android:textColorHint">@color/amount_hint</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:gravity">end|center_vertical</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="TakaSign" parent="AmountLabel">
+        <item name="android:textSize">@dimen/taka_sign_text_size</item>
+        <item name="android:layout_marginEnd">@dimen/amount_gap</item>
+    </style>
+
+    <!-- ===== Change breakdown ===== -->
+    <style name="SectionTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/section_text_size</item>
+        <item name="android:textColor">@color/navy_900</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="SectionMeta">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/section_text_size</item>
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="NoteRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/tile_height</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <!-- A result tile (not a button): label on top, count below. -->
+    <style name="NoteTile">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginStart">@dimen/tile_half_gap</item>
+        <item name="android:layout_marginEnd">@dimen/tile_half_gap</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">@dimen/tile_padding</item>
+        <item name="android:paddingEnd">@dimen/tile_padding</item>
+        <item name="android:background">@drawable/bg_note_tile</item>
+    </style>
+
+    <style name="NoteLabel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/note_label_text_size</item>
+        <item name="android:textColor">@color/note_label_text</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:importantForAccessibility">no</item>
+    </style>
+
+    <!-- Fixed height (not wrap_content) so autosize works and updates never trigger a re-layout. -->
+    <style name="NoteCount">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/note_count_height</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/note_count_text_size</item>
+        <item name="android:textColor">@color/note_count_text</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:importantForAccessibility">no</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMinTextSize">@dimen/note_count_min_text_size</item>
+        <item name="autoSizeMaxTextSize">@dimen/note_count_text_size</item>
+    </style>
+
+    <!-- ===== Footer watermark ===== -->
+    <style name="FooterWatermark">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/footer_margin_bottom</item>
+        <item name="android:textSize">@dimen/footer_text_size</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:letterSpacing">0.06</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <!-- ===== Keypad ===== -->
+    <style name="KeypadRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <!-- Flat keys (stateListAnimator off): the ripple is the press feedback, and no
+         elevation animation has to be re-rendered on every tap. -->
+    <style name="KeyButton" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">@dimen/key_half_gap</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">@dimen/key_min_height</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:background">@drawable/bg_key</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textSize">@dimen/key_text_size</item>
+        <item name="android:textColor">@color/key_text</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- Backspace: looks like a digit key; TalkBack reads the description, not "⌫". -->
+    <style name="BackspaceButton" parent="KeyButton">
+        <item name="android:contentDescription">@string/key_backspace_description</item>
+    </style>
+
+    <!-- CLEAR: one key column like the others, soft gold so it stands apart. -->
+    <style name="ClearButton" parent="KeyButton">
+        <item name="android:background">@drawable/bg_key_clear</item>
+        <item name="android:textColor">@color/clear_text</item>
+        <item name="android:textSize">@dimen/clear_text_size</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:contentDescription">@string/key_clear_description</item>
+    </style>
+
+</resources>

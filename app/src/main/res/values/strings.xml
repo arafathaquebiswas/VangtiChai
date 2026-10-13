@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">VangtiChai</string>
+    <string name="app_tagline">Bangladeshi change calculator</string>
+    <string name="taka_label">Taka:</string>
+    <string name="taka_sign">৳</string>
+    <string name="amount_hint">0</string>
+
+    <string name="breakdown_title">Change breakdown</string>
+    <plurals name="total_notes">
+        <item quantity="one">%1$d note</item>
+        <item quantity="other">%1$d notes</item>
+    </plurals>
+
+    <!-- Denomination tiles: label "৳500", count "× 13" -->
+    <string name="note_500">৳500</string>
+    <string name="note_100">৳100</string>
+    <string name="note_50">৳50</string>
+    <string name="note_20">৳20</string>
+    <string name="note_10">৳10</string>
+    <string name="note_5">৳5</string>
+    <string name="note_2">৳2</string>
+    <string name="note_1">৳1</string>
+    <string name="note_count">× %1$d</string>
+    <!-- Read by TalkBack for a whole tile, e.g. "500 taka: 13 notes" (quantity = count) -->
+    <plurals name="note_description">
+        <item quantity="one">%1$d taka: %2$d note</item>
+        <item quantity="other">%1$d taka: %2$d notes</item>
+    </plurals>
+
+    <string name="max_digits_reached">Digit limit reached (%1$d)</string>
+
+    <string name="key_0">0</string>
+    <string name="key_1">1</string>
+    <string name="key_2">2</string>
+    <string name="key_3">3</string>
+    <string name="key_4">4</string>
+    <string name="key_5">5</string>
+    <string name="key_6">6</string>
+    <string name="key_7">7</string>
+    <string name="key_8">8</string>
+    <string name="key_9">9</string>
+    <string name="key_clear">CLEAR</string>
+    <string name="key_clear_description">Clear amount</string>
+    <string name="key_backspace">⌫</string>
+    <string name="key_backspace_description">Delete last digit</string>
+
+    <!-- Footer watermark -->
+    <string name="footer_watermark">Made By AB</string>
+</resources>

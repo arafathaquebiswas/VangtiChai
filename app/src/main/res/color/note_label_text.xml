@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Denomination label ("৳500") inside a note tile -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/gold_800" android:state_activated="true" />
+    <item android:color="@color/text_secondary" />
+</selector>

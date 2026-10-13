@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Digit key: white rounded surface, navy ripple when pressed, blue ring when focused
+     (keyboard / D-pad), greyed out when disabled. Flat (no shadow) to keep drawing cheap. -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/ripple_navy">
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/white" />
+            <corners android:radius="@dimen/key_corner_radius" />
+        </shape>
+    </item>
+    <item>
+        <selector>
+            <item android:state_enabled="false">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/key_disabled" />
+                    <corners android:radius="@dimen/key_corner_radius" />
+                </shape>
+            </item>
+            <item android:state_focused="true">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/surface" />
+                    <stroke android:width="@dimen/focus_stroke" android:color="@color/navy_600" />
+                    <corners android:radius="@dimen/key_corner_radius" />
+                </shape>
+            </item>
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/surface" />
+                    <stroke android:width="@dimen/hairline" android:color="@color/outline" />
+                    <corners android:radius="@dimen/key_corner_radius" />
+                </shape>
+            </item>
+        </selector>
+    </item>
+</ripple>

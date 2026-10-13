@@ -1,0 +1,33 @@
+<resources>
+    <!-- Navy / blue, matched to the VangtiChai logo -->
+    <color name="navy_900">#0B1F3A</color>
+    <color name="navy_800">#0F2B57</color>
+    <color name="navy_600">#1D4E9E</color>
+
+    <!-- Gold accent (logo "Chai" / coins) -->
+    <color name="gold_500">#F0BE4A</color>
+    <color name="gold_100">#FDF3D7</color>
+    <color name="gold_200">#F7E2A6</color>
+    <color name="gold_800">#6F4A00</color>
+
+    <!-- Neutrals -->
+    <color name="screen_background">#F2F5FA</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="outline">#D9E1EC</color>
+    <color name="text_secondary">#55657D</color>
+    <color name="text_muted">#7D8AA0</color>
+    <color name="text_disabled">#A7B1C0</color>
+    <color name="key_disabled">#EAEEF4</color>
+
+    <!-- Touch feedback and amount hint -->
+    <color name="ripple_navy">#290F2B57</color>
+    <color name="ripple_gold">#40B88A1A</color>
+    <color name="amount_hint">#66FFFFFF</color>
+
+    <!-- System bar scrims (only drawn where the OS cannot use dark icons, API 21-26) -->
+    <color name="bar_scrim_light">#E6F2F5FA</color>
+    <color name="bar_scrim_dark">#990B1F3A</color>
+
+    <!-- Adaptive launcher icon background (the logo sits on white, as supplied) -->
+    <color name="ic_launcher_background">#FFFFFF</color>
+</resources>

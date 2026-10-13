@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    LANDSCAPE layout (phones and tablets; sizes come from values-land/ or values-sw600dp-land/).
+    Left half:  header, amount card ("Taka:" ৳ <amount>), note tiles 4 x 2 (৳500 ... ৳1)
+    Right half: keypad   1 2 3 4 / 5 6 7 8 / 9 0 ⌫ CLEAR
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/centerGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <!-- ===== Left half: summary ===== -->
+    <LinearLayout
+        android:id="@+id/leftPane"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/screen_margin"
+        android:layout_marginEnd="@dimen/screen_margin"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/tvFooter"
+        app:layout_constraintEnd_toStartOf="@+id/centerGuide"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_max="@dimen/content_max_width">
+
+        <!-- Header -->
+        <LinearLayout
+            android:id="@+id/headerBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/key_half_gap"
+            android:layout_marginEnd="@dimen/key_half_gap"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Decorative: the title next to it already names the app -->
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="@dimen/header_logo_size"
+                android:layout_height="@dimen/header_logo_size"
+                android:importantForAccessibility="no"
+                android:scaleType="fitCenter"
+                android:src="@drawable/vangtichai_logo" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/header_gap"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/HeaderTitle"
+                    android:accessibilityHeading="true"
+                    android:text="@string/app_name"
+                    tools:targetApi="p" />
+
+                <TextView
+                    style="@style/HeaderTagline"
+                    android:text="@string/app_tagline" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Amount card: "Taka:" and the entered amount -->
+        <LinearLayout
+            android:id="@+id/amountCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/key_half_gap"
+            android:layout_marginTop="@dimen/section_gap"
+            android:layout_marginEnd="@dimen/key_half_gap"
+            android:background="@drawable/bg_amount_card"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/amount_card_padding_h"
+            android:paddingTop="@dimen/amount_card_padding_v"
+            android:paddingEnd="@dimen/amount_card_padding_h"
+            android:paddingBottom="@dimen/amount_card_padding_v">
+
+            <TextView
+                android:id="@+id/tvTakaLabel"
+                style="@style/AmountLabel"
+                android:labelFor="@+id/tvAmount"
+                android:text="@string/taka_label" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TakaSign"
+                    android:importantForAccessibility="no"
+                    android:text="@string/taka_sign" />
+
+                <TextView
+                    android:id="@+id/tvAmount"
+                    style="@style/AmountText"
+                    android:layout_weight="1"
+                    android:accessibilityLiveRegion="polite"
+                    android:hint="@string/amount_hint" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Change breakdown title + total number of notes -->
+        <LinearLayout
+            android:id="@+id/breakdownHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/key_half_gap"
+            android:layout_marginTop="@dimen/section_gap"
+            android:layout_marginEnd="@dimen/key_half_gap"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/SectionTitle"
+                android:accessibilityHeading="true"
+                android:text="@string/breakdown_title"
+                tools:targetApi="p" />
+
+            <!-- 0dp + weight: a fixed width, so a changing count only redraws this view -->
+            <TextView
+                android:id="@+id/tvTotalNotes"
+                style="@style/SectionMeta"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:maxLines="1"
+                tools:text="19 notes" />
+        </LinearLayout>
+
+        <!-- Note tiles: 500 100 50 20 / 10 5 2 1 -->
+        <LinearLayout
+            style="@style/NoteRow"
+            android:layout_marginTop="@dimen/section_label_gap">
+
+            <LinearLayout android:id="@+id/tile500" style="@style/NoteTile">
+                <TextView style="@style/NoteLabel" android:text="@string/note_500" />
+                <TextView android:id="@+id/tvNote500" style="@style/NoteCount" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/tile100" style="@style/NoteTile">
+                <TextView style="@style/NoteLabel" android:text="@string/note_100" />
+                <TextView android:id="@+id/tvNote100" style="@style/NoteCount" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/tile50" style="@style/NoteTile">
+                <TextView style="@style/NoteLabel" android:text="@string/note_50" />
+                <TextView android:id="@+id/tvNote50" style="@style/NoteCount" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/tile20" style="@style/NoteTile">
+                <TextView style="@style/NoteLabel" android:text="@string/note_20" />
+                <TextView android:id="@+id/tvNote20" style="@style/NoteCount" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/NoteRow"
+            android:layout_marginTop="@dimen/tile_row_gap">
+
+            <LinearLayout android:id="@+id/tile10" style="@style/NoteTile">
+                <TextView style="@style/NoteLabel" android:text="@string/note_10" />
+                <TextView android:id="@+id/tvNote10" style="@style/NoteCount" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/tile5" style="@style/NoteTile">
+                <TextView style="@style/NoteLabel" android:text="@string/note_5" />
+                <TextView android:id="@+id/tvNote5" style="@style/NoteCount" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/tile2" style="@style/NoteTile">
+                <TextView style="@style/NoteLabel" android:text="@string/note_2" />
+                <TextView android:id="@+id/tvNote2" style="@style/NoteCount" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/tile1" style="@style/NoteTile">
+                <TextView style="@style/NoteLabel" android:text="@string/note_1" />
+                <TextView android:id="@+id/tvNote1" style="@style/NoteCount" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ===== Right half: keypad ===== -->
+    <LinearLayout
+        android:id="@+id/keypad"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/screen_margin"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/tvFooter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_max="@dimen/keypad_max_height"
+        app:layout_constraintStart_toStartOf="@+id/centerGuide"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_max="@dimen/keypad_max_width">
+
+        <LinearLayout style="@style/KeypadRow">
+            <com.arafat.vangtichai.KeypadButton android:id="@+id/btn1" style="@style/KeyButton" android:text="@string/key_1" />
+            <com.arafat.vangtichai.KeypadButton android:id="@+id/btn2" style="@style/KeyButton" android:text="@string/key_2" />
+            <com.arafat.vangtichai.KeypadButton android:id="@+id/btn3" style="@style/KeyButton" android:text="@string/key_3" />
+            <com.arafat.vangtichai.KeypadButton android:id="@+id/btn4" style="@style/KeyButton" android:text="@string/key_4" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/KeypadRow">
+            <com.arafat.vangtichai.KeypadButton android:id="@+id/btn5" style="@style/KeyButton" android:text="@string/key_5" />
+            <com.arafat.vangtichai.KeypadButton android:id="@+id/btn6" style="@style/KeyButton" android:text="@string/key_6" />
+            <com.arafat.vangtichai.KeypadButton android:id="@+id/btn7" style="@style/KeyButton" android:text="@string/key_7" />
+            <com.arafat.vangtichai.KeypadButton android:id="@+id/btn8" style="@style/KeyButton" android:text="@string/key_8" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/KeypadRow">
+            <com.arafat.vangtichai.KeypadButton android:id="@+id/btn9" style="@style/KeyButton" android:text="@string/key_9" />
+            <com.arafat.vangtichai.KeypadButton android:id="@+id/btn0" style="@style/KeyButton" android:text="@string/key_0" />
+            <com.arafat.vangtichai.KeypadButton android:id="@+id/btnBackspace" style="@style/BackspaceButton" android:text="@string/key_backspace" />
+            <com.arafat.vangtichai.KeypadButton android:id="@+id/btnClear" style="@style/ClearButton" android:text="@string/key_clear" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ===== Footer watermark: bottom centre, just above the navigation bar ===== -->
+    <TextView
+        android:id="@+id/tvFooter"
+        style="@style/FooterWatermark"
+        android:text="@string/footer_watermark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

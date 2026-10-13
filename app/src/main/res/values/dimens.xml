@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sizes shared by every configuration. Per-configuration sizes are in sizes.xml. -->
+<resources>
+    <dimen name="card_corner_radius">20dp</dimen>
+    <dimen name="tile_corner_radius">14dp</dimen>
+    <dimen name="key_corner_radius">16dp</dimen>
+    <dimen name="hairline">1dp</dimen>
+    <dimen name="focus_stroke">2dp</dimen>
+    <!-- Minimum touch target for every key -->
+    <dimen name="key_min_height">48dp</dimen>
+    <dimen name="note_count_min_text_size">10sp</dimen>
+</resources>
