@@ -5,7 +5,14 @@ Status as of 13 Oct 2026. [x] = done and verified, [ ] = still to do.
 ## A. Build and code (done on the Mac, no emulator)
 - [x] Backup created: cselab/VangtiChai_backup_stage1_20261013-1915.tar.gz
 - [x] applicationId `com.arafat.vangtichai` (permanent once published)
-- [x] minSdk 21, targetSdk 36, compileSdk 36 (meets Play's target API requirement)
+- [x] Git commit backup of the working app (3a25bd6, 337c1c8)
+- [x] minSdk 21, targetSdk 36, compileSdk 36 — Play requires API 36 for new apps and
+      updates since 31 Aug 2026 (checked on developer.android.com, 13 Oct 2026)
+- [x] Only one exported activity (MainActivity, the launcher — must be exported)
+- [x] No debug logging, StrictMode, cleartext traffic or dev-only config in app code
+- [x] Launcher, round and adaptive icons all use the custom VangtiChai logo (no default
+      Android icon); logo stays inside the visible circle used by round masks and the
+      Android 12+ splash screen
 - [x] versionCode 1, versionName "1.0" (increase versionCode for every upload)
 - [x] Release build is not debuggable
 - [x] No INTERNET or dangerous permissions; no ads/analytics SDKs

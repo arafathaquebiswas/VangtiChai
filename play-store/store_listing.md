@@ -1,11 +1,24 @@
 # VangtiChai — Google Play store listing (draft)
 
 Copy each field into Play Console → Grow → Store presence → Main store listing.
-Character limits are Google's. Checked lengths: name 23/30, short description 74/80,
+Character limits are Google's. Checked lengths: name 10/30, short description 74/80,
 full description 1234/4000.
 
+## Default listing language
+English (United States) – en-US. A Bengali (bn-BD) translation can be added later
+under Store presence → Main store listing → Manage translations.
+
 ## App name (max 30)
-VangtiChai: Taka Change
+VangtiChai
+
+## Release notes for version 1.0 (max 500 per language)
+<en-US>
+First release of VangtiChai.
+• Type any amount and instantly see the fewest Taka notes (৳500 to ৳1)
+• Backspace and CLEAR keys
+• Portrait and landscape, phones and tablets
+• Works offline, no ads, no data collected
+</en-US>
 
 ## Short description (max 80)
 Type any amount and instantly see the fewest Taka notes needed for change.
