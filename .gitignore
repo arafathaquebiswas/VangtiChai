@@ -9,3 +9,9 @@
 .externalNativeBuild/
 .cxx/
 .kotlin/
+
+# Signing: keystores and passwords must never be committed
+*.jks
+*.keystore
+keystore.properties
+/app/release/
