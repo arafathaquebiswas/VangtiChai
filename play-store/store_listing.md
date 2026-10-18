@@ -60,14 +60,15 @@ Made by Arafat Haque Biswas.
 - Suggested tags: Calculator, Finance, Money
 
 ## Contact details (required)
-- Email: <your support email>
+- Email: arafathaquebiswas@gmail.com
 - Website: optional
-- Privacy policy URL: <public URL where privacy_policy.html is hosted>
+- Privacy policy URL: https://arafathaquebiswas.github.io/vangtichai-privacy-policy/
+  (GitHub Pages, repo arafathaquebiswas/vangtichai-privacy-policy, branch master; verified HTTP 200 on 13 Oct 2026)
 
 ## Graphics needed (Play Console limits)
 | Asset | Requirement | Status |
 |---|---|---|
 | App icon | 512 × 512 PNG, ≤ 1 MB | play-store/store_icon_512.png (ready) |
-| Feature graphic | 1024 × 500 PNG or JPEG, ≤ 15 MB | to do |
-| Phone screenshots | 2–8, PNG/JPEG, 16:9 or 9:16, each side 320–3840 px | to do (needs emulator or phone) |
+| Feature graphic | 1024 × 500 PNG or JPEG, ≤ 15 MB | play-store/feature_graphic.png (ready) |
+| Phone screenshots | 2–8, PNG/JPEG, 16:9 or 9:16, each side 320–3840 px | play-store/screenshots/phone/ (5 ready: 01–05) |
 | 7" / 10" tablet screenshots | optional, but needed to be featured for tablets | optional |

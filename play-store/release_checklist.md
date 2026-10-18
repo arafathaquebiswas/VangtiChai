@@ -23,8 +23,12 @@ Status as of 13 Oct 2026. [x] = done and verified, [ ] = still to do.
 - [x] Keystore files excluded from git (.gitignore)
 
 ## B. Needs your approval (Stage 7)
-- [ ] Emulator check of the release build (one emulator only)
-- [ ] Phone screenshots (2–8) — from the emulator or your own phone
+- [x] Emulator check (Pixel XL, API 34, one emulator): 19/19 Espresso tests on the debug
+      build; release build installed and checked (keys, ⌫, CLEAR, rotation, max input,
+      process death, restart, dark mode, splash, recents, 3-button and gesture navigation)
+- [x] Phone screenshots: play-store/screenshots/phone/ (5 genuine captures, 1440×2560 /
+      2560×1440, status bar cleaned with SystemUI demo mode)
+- [ ] Not run: Nexus 10 tablet and Android 16 (API 36) — no emulator started/downloaded
 - [ ] Create upload keystore + signed bundle:
       Android Studio → Build → Generate Signed App Bundle or APK → Android App Bundle →
       Create new… → save the .jks OUTSIDE the project folder → Build variant: release

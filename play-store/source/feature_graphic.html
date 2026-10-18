@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>VangtiChai feature graphic</title>
+<style>
+  /* Colours from the app (res/values/colors.xml) and the logo */
+  :root {
+    --navy-900: #0B1F3A; --navy-800: #0F2B57; --navy-600: #1D4E9E;
+    --gold-500: #F0BE4A; --gold-100: #FDF3D7; --text-soft: #C9D6EA;
+  }
+  html, body { margin: 0; width: 1024px; height: 500px; overflow: hidden; }
+  body {
+    position: relative;
+    background:
+      radial-gradient(circle at 18% 50%, rgba(240,190,74,0.16) 0, rgba(240,190,74,0) 34%),
+      radial-gradient(circle at 92% 8%, rgba(29,78,158,0.55) 0, rgba(29,78,158,0) 38%),
+      linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 55%, #163F80 100%);
+    font-family: -apple-system, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    color: #fff;
+  }
+  /* Soft decorative rings (background only) */
+  .ring { position: absolute; border-radius: 50%; border: 2px solid rgba(240,190,74,0.10); }
+  .r1 { width: 520px; height: 520px; right: -170px; bottom: -260px; }
+  .r2 { width: 340px; height: 340px; right: -80px; bottom: -170px; border-color: rgba(255,255,255,0.06); }
+
+  .wrap { position: absolute; inset: 0; display: flex; align-items: center; padding-left: 84px; gap: 52px; }
+
+  /* Original logo, shown by clipping just inside its own rounded blue square
+     (square measured at x 160-1094, y 154-1088 in the 1254 px file; clipped 8 px inside it). */
+  .logo {
+    width: 300px; height: 300px; flex: none; position: relative; overflow: hidden;
+    border-radius: 80px;                                   /* clip inside the logo's own rounded corner */
+    box-shadow: 0 18px 40px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.05);
+  }
+  .logo img {
+    position: absolute;
+    width: 409.8px; height: 409.8px;                       /* 1254 x 300/918 */
+    left: -54.9px; top: -52.9px;                           /* 168, 162 x 300/918 */
+  }
+
+  .text { display: flex; flex-direction: column; }
+  .title { font-size: 92px; font-weight: 800; letter-spacing: -1.5px; line-height: 1; margin: 0; }
+  .title .gold { color: var(--gold-500); }
+  .tagline { font-size: 31px; font-weight: 500; color: var(--text-soft); margin: 18px 0 0; letter-spacing: 0.2px; }
+  .notes { display: flex; gap: 9px; margin-top: 30px; }
+  .note {
+    font-size: 19px; font-weight: 700; color: var(--gold-500);
+    padding: 7px 12px; border-radius: 12px;
+    border: 1.5px solid rgba(240,190,74,0.55); background: rgba(240,190,74,0.10);
+  }
+</style>
+</head>
+<body>
+  <div class="ring r1"></div><div class="ring r2"></div>
+  <div class="wrap">
+    <div class="logo"><img src="file:///Users/arafat/Desktop/cselab/VangtiChai/VangtiChai_Finance_Calculator_Icon.png" alt=""></div>
+    <div class="text">
+      <h1 class="title">Vangti<span class="gold">Chai</span></h1>
+      <p class="tagline">Bangladeshi Taka Change Calculator</p>
+      <div class="notes">
+        <span class="note">৳500</span><span class="note">৳100</span><span class="note">৳50</span><span class="note">৳20</span>
+        <span class="note">৳10</span><span class="note">৳5</span><span class="note">৳2</span><span class="note">৳1</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
