@@ -1,0 +1,75 @@
+============================================================
+           AI USAGE DECLARATION
+============================================================
+
+Name: Arafat Haque Biswas
+Student ID: 24241325
+Assignment: VangtiChai – Android Currency Calculator
+Date: 24 oct 2026
+
+------------------------------------------------------------
+1. AI TOOLS USED (check all that apply)
+------------------------------------------------------------
+[ ] None
+[ ] ChatGPT
+[ ] GitHub Copilot
+[ ] Google Gemini
+[x] Claude
+[ ] Cursor
+[ ] Other: ________________
+
+------------------------------------------------------------
+2. PURPOSE OF AI USE (check all that apply)
+------------------------------------------------------------
+[x] Learning/understanding concepts
+[x] Debugging my code
+[x] Generating code snippets
+[ ] Writing text content
+[x] Design/styling ideas
+[ ] Image generation
+[ ] Other: ________________
+
+------------------------------------------------------------
+3. DESCRIPTION OF AI USE
+------------------------------------------------------------
+I used Claude AI as a development assistant while building
+VangtiChai, an Android application that calculates
+Bangladeshi Taka denominations.
+
+I used AI assistance to understand Kotlin and Android
+development concepts, develop and debug calculator logic,
+implement custom keypad behavior, improve XML layouts,
+support portrait and landscape orientations, and review
+tablet responsiveness.
+
+I also used AI assistance to identify potential errors,
+suggest testing approaches, and improve code organization.
+I reviewed the generated suggestions and tested the
+application during development.
+
+------------------------------------------------------------
+4. AI-ASSISTED SECTIONS
+------------------------------------------------------------
+File: MainActivity.kt
+Section: Keypad input, button handling, and UI updates
+
+File: ChangeCalculator.kt
+Section: Currency denomination calculation algorithm
+
+File: layout/activity_main.xml (portrait),
+      layout-land/activity_main.xml (landscape)
+Section: Calculator UI, custom keypad, and responsive layout
+
+------------------------------------------------------------
+5. DECLARATION
+------------------------------------------------------------
+I declare that:
+- This disclosure is complete and accurate
+- I understand all code in my submission
+- I can explain and modify my work if asked
+- I take full responsibility for my submission
+
+Signature: Arafat
+Date:24 oct 2026
+
+============================================================
