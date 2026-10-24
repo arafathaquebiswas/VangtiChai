@@ -4,6 +4,7 @@
 
 Name: Arafat Haque Biswas
 Student ID: 24241325
+Course: CSE 489 - Mobile Application Development
 Assignment: VangtiChai – Android Currency Calculator
 Date: 24 oct 2026
 
@@ -11,10 +12,10 @@ Date: 24 oct 2026
 1. AI TOOLS USED (check all that apply)
 ------------------------------------------------------------
 [ ] None
-[ ] ChatGPT
-[ ] GitHub Copilot
+[x] ChatGPT
+[x] GitHub Copilot
 [ ] Google Gemini
-[x] Claude
+[x] Claude (Claude Code, an AI coding assistant)
 [ ] Cursor
 [ ] Other: ________________
 
@@ -24,41 +25,87 @@ Date: 24 oct 2026
 [x] Learning/understanding concepts
 [x] Debugging my code
 [x] Generating code snippets
-[ ] Writing text content
+[x] Writing text content
 [x] Design/styling ideas
-[ ] Image generation
-[ ] Other: ________________
+[x] Image generation
+[x] Other: Generating complete source files, resources and
+           Gradle project setup; writing and running unit,
+           UI and emulator tests; Google Play release
+           preparation
 
 ------------------------------------------------------------
 3. DESCRIPTION OF AI USE
 ------------------------------------------------------------
-I used Claude AI as a development assistant while building
-VangtiChai, an Android application that calculates
-Bangladeshi Taka denominations.
+I used Claude AI extensively while building VangtiChai, an
+Android application that calculates Bangladeshi Taka
+denominations.
 
-I used AI assistance to understand Kotlin and Android
-development concepts, develop and debug calculator logic,
-implement custom keypad behavior, improve XML layouts,
-support portrait and landscape orientations, and review
-tablet responsiveness.
+Claude generated most of the project from the requirements
+in the assignment PDF, including the Android Studio/Gradle
+project setup, the Kotlin source files, the XML layouts and
+resources, and the unit and UI tests. I gave the
+requirements, asked for changes and improvements, and
+reviewed the results.
 
-I also used AI assistance to identify potential errors,
-suggest testing approaches, and improve code organization.
-I reviewed the generated suggestions and tested the
-application during development.
+I also used AI assistance to:
+- understand Kotlin and Android concepts (activity
+  lifecycle, saving state on rotation, ConstraintLayout,
+  resource qualifiers for phones and tablets)
+- find and fix problems, such as the keypad not fitting on
+  7-inch tablet screens and quick repeated key taps being
+  lost
+- write and run unit tests, UI (Espresso) tests and
+  emulator checks on Pixel XL and Nexus 10
+- write the README.txt documentation and notes that explain
+  the code
+- prepare Google Play release materials: privacy policy,
+  store listing text, the feature graphic (made from my own
+  app logo) and app screenshots. The app logo itself was
+  provided by me.
+
+I reviewed the generated code, studied how it works and
+tested the application during development.
 
 ------------------------------------------------------------
 4. AI-ASSISTED SECTIONS
 ------------------------------------------------------------
 File: MainActivity.kt
-Section: Keypad input, button handling, and UI updates
+Section: Keypad input, button handling, UI updates, saving
+         the amount on rotation, hardware keyboard input
 
 File: ChangeCalculator.kt
-Section: Currency denomination calculation algorithm
+Section: Currency denomination calculation algorithm (greedy
+         method), digit entry rules, input checking
+
+File: KeypadButton.kt
+Section: Custom keypad button that does not lose quick
+         repeated taps
 
 File: layout/activity_main.xml (portrait),
       layout-land/activity_main.xml (landscape)
 Section: Calculator UI, custom keypad, and responsive layout
+
+File: res/values/ (strings.xml, colors.xml, themes.xml,
+      dimens.xml, sizes.xml), values-land/, values-sw600dp/,
+      values-sw600dp-land/ (sizes.xml), res/drawable/,
+      res/color/
+Section: Text, colours, styles, shapes, and sizes for phones
+         and tablets in portrait and landscape
+
+File: AndroidManifest.xml, app/build.gradle.kts,
+      build.gradle.kts, settings.gradle.kts,
+      gradle/libs.versions.toml
+Section: Project, build and release configuration
+
+File: ChangeCalculatorTest.kt, MainActivityTest.kt
+Section: Unit tests and UI tests
+
+File: README.txt
+Section: Project documentation and test results
+
+File: play-store/ folder
+Section: Google Play materials (privacy policy, listing text,
+         feature graphic, screenshots, release guides)
 
 ------------------------------------------------------------
 5. DECLARATION
