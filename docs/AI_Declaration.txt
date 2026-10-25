@@ -24,10 +24,10 @@ Date: 24 oct 2026
 ------------------------------------------------------------
 [x] Learning/understanding concepts
 [x] Debugging my code
-[x] Generating code snippets
-[x] Writing text content
+[X] Generating code snippets
+[X] Writing text content
 [x] Design/styling ideas
-[x] Image generation
+[x] Image generation logo 
 [x] Other: Generating complete source files, resources and
            Gradle project setup; writing and running unit,
            UI and emulator tests; Google Play release
@@ -44,7 +44,7 @@ Claude AI assisted me in the following areas:
 
 - User Interface Design: Helped create a modern blue-and-white interface with a custom app logo, a large amount display featuring the ৳ symbol, eight currency denomination cards, a custom numeric keypad, rounded buttons, and the "Made By AB" footer.
 
-- Calculator Logic:** Assisted in implementing the greedy algorithm to calculate the required quantities of Bangladeshi Taka denominations (৳500, ৳100, ৳50, ৳20, ৳10, ৳5, ৳2, and ৳1) using division and the modulus operator.
+- Calculator Logic: Assisted in implementing the greedy algorithm to calculate the required quantities of Bangladeshi Taka denominations (৳500, ৳100, ৳50, ৳20, ৳10, ৳5, ৳2, and ৳1) using division and the modulus operator.
 
 - Keypad Functionality: Helped implement numeric input from 0 to 9, the CLEAR button, backspace functionality, a maximum input length of nine digits, and validation to prevent negative values, decimal inputs, and unnecessary leading zeros.
 
@@ -54,7 +54,7 @@ Claude AI assisted me in the following areas:
 
 - Testing and Verification: Used AI assistance to write and review unit tests and UI tests, including Espresso tests, and to check calculator accuracy for zero, small amounts, large amounts, and the maximum nine-digit input. I also checked CLEAR and backspace functionality, repeated button presses, screen rotation, and layout behavior on different screen sizes.
 
-- Documentation and Google Play Preparation:** Used Claude AI to help prepare the README.txt documentation, code explanations, privacy policy, Google Play Store listing text, feature graphic, and app screenshots. The original app logo was provided by me.
+- Documentation and Google Play Preparation: Used Claude AI to help prepare the README.txt documentation, code explanations, privacy policy, Google Play Store listing text, feature graphic, and app screenshots. The original app logo was provided by me.
 
 I provided the requirements, reviewed the generated code, requested corrections and improvements, and studied how the application works. AI assistance supported the development and testing process, while I remained involved in reviewing the results and verifying the application's functionality.
 
