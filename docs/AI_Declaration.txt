@@ -34,37 +34,29 @@ Date: 24 oct 2026
            preparation
 
 ------------------------------------------------------------
-3. DESCRIPTION OF AI USE
-------------------------------------------------------------
-I used Claude AI extensively while building VangtiChai, an
-Android application that calculates Bangladeshi Taka
-denominations.
+3.DESCRIPTION OF AI USE
 
-Claude generated most of the project from the requirements
-in the assignment PDF, including the Android Studio/Gradle
-project setup, the Kotlin source files, the XML layouts and
-resources, and the unit and UI tests. I gave the
-requirements, asked for changes and improvements, and
-reviewed the results.
+I used Claude AI extensively while developing VangtiChai, an offline Android application for calculating Bangladeshi Taka denominations. I provided Claude AI with a detailed development prompt describing the app's requirements, functionality, user interface, calculator logic, and testing requirements.
 
-I also used AI assistance to:
-- understand Kotlin and Android concepts (activity
-  lifecycle, saving state on rotation, ConstraintLayout,
-  resource qualifiers for phones and tablets)
-- find and fix problems, such as the keypad not fitting on
-  7-inch tablet screens and quick repeated key taps being
-  lost
-- write and run unit tests, UI (Espresso) tests and
-  emulator checks on Pixel XL and Nexus 10
-- write the README.txt documentation and notes that explain
-  the code
-- prepare Google Play release materials: privacy policy,
-  store listing text, the feature graphic (made from my own
-  app logo) and app screenshots. The app logo itself was
-  provided by me.
+Claude AI assisted me in the following areas:
 
-I reviewed the generated code, studied how it works and
-tested the application during development.
+- Project Setup and Development: Generated and assisted with the Android Studio project structure, Gradle configuration, Kotlin source code, XML layouts, resources, and required dependencies using Kotlin and XML, with a minimum SDK version of 24.
+
+- User Interface Design: Helped create a modern blue-and-white interface with a custom app logo, a large amount display featuring the ৳ symbol, eight currency denomination cards, a custom numeric keypad, rounded buttons, and the "Made By AB" footer.
+
+- Calculator Logic:** Assisted in implementing the greedy algorithm to calculate the required quantities of Bangladeshi Taka denominations (৳500, ৳100, ৳50, ৳20, ৳10, ৳5, ৳2, and ৳1) using division and the modulus operator.
+
+- Keypad Functionality: Helped implement numeric input from 0 to 9, the CLEAR button, backspace functionality, a maximum input length of nine digits, and validation to prevent negative values, decimal inputs, and unnecessary leading zeros.
+
+- Responsive Layouts and Screen Rotation:** Assisted in creating separate portrait and landscape XML layouts and responsive resources for tablets, including `values-sw600dp`. I also used AI assistance to understand activity lifecycle management and preserve the entered amount during screen rotation.
+
+- Debugging and Problem Solving: Used Claude AI to identify and resolve development issues, including keypad layout problems on tablet screens and lost inputs during rapid, repeated button presses.
+
+- Testing and Verification: Used AI assistance to write and review unit tests and UI tests, including Espresso tests, and to check calculator accuracy for zero, small amounts, large amounts, and the maximum nine-digit input. I also checked CLEAR and backspace functionality, repeated button presses, screen rotation, and layout behavior on different screen sizes.
+
+- Documentation and Google Play Preparation:** Used Claude AI to help prepare the README.txt documentation, code explanations, privacy policy, Google Play Store listing text, feature graphic, and app screenshots. The original app logo was provided by me.
+
+I provided the requirements, reviewed the generated code, requested corrections and improvements, and studied how the application works. AI assistance supported the development and testing process, while I remained involved in reviewing the results and verifying the application's functionality.
 
 ------------------------------------------------------------
 4. AI-ASSISTED SECTIONS
